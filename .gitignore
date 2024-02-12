@@ -42,13 +42,18 @@ desktop.ini    # Windows
 *.tmp
 *.bak
 *.cache
+*_templ.go
 
 # Build files
-static/css/o*
+static/css/*
 static/html/*
 static/js/*
-src/out
 msc/*
+
+touch static/html/.gitkeep
+touch static/js/.gitkeep
+
+!.gitkeep
 
 bin/
 pkg/
