@@ -9,7 +9,6 @@ templ IndexTempl() {
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<script type="module" src="/static/js/index.js"></script>
 			<link href="/static/css/output.css" rel="stylesheet"/>
-			<!-- <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script> -->
 			<script src="https://unpkg.com/htmx.org@2.0.0-alpha1/dist/htmx.min.js"></script>
 			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 			<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism.min.css" rel="stylesheet"/>
@@ -20,146 +19,8 @@ templ IndexTempl() {
 		</head>
 		<body>
 			<header>
-				<t-mobile-top-app-bar>
-					<md-icon slot="navigationIcon" class="material-symbols-filled">menu</md-icon>
-				</t-mobile-top-app-bar>
-				<t-mobile-navigation>
-					<div slot="footer">
-						<temporary-list-item interactive type="link" href="https://github.com/caleb-sideras/">
-							github
-							<md-icon slot="end" class="material-symbols-filled-light">north_east</md-icon>
-						</temporary-list-item>
-						<temporary-list-item interactive type="link" href="https://www.linkedin.com/in/caleb-james-sideras-9555b0196/">
-							linkedin
-							<md-icon slot="end" class="material-symbols-filled-eeight">north_east</md-icon>
-						</temporary-list-item>
-					</div>
-					<t-mobile-navigation-rail slot="rail">
-						<temporary-list-item interactive type="button" href="/" regex="^/?$" hx-get="/" hx-target="main" hx-push-url="true">
-							Home
-							<md-icon slot="start" class="material-symbols-filled">crop_square</md-icon>
-						</temporary-list-item>
-						<temporary-list-item interactive type="button" href="/projects" regex={`^/?\/projects(\/?|\/.*)?$`}>
-							Projects
-							<md-icon slot="start" class="material-symbols-filled">code_blocks</md-icon>
-							<md-icon slot="end" class="material-symbols-filled">arrow_forward</md-icon>
-						</temporary-list-item>
-						<temporary-list-item interactive type="button" href="/experience" regex={`^/?\/experience(\/?|\/.*)?$`} hx-get="/experience" hx-target="main" hx-push-url="true">
-							Experience
-							<md-icon slot="start" class="material-symbols-filled">developer_guide</md-icon>
-						</temporary-list-item>
-						<temporary-list-item interactive type="button" href="/blog" hx-get="/blog" regex={`^/?\/blog(\/?|\/.*)?$`} hx-target="main" hx-push-url="true">
-							Blog
-							<md-icon slot="start" class="material-symbols-filled">article</md-icon>
-						</temporary-list-item>
-					</t-mobile-navigation-rail>
-					<t-mobile-navigation-drawer slot="drawer">
-						<temporary-list-item interactive border type="button" href="/projects" hx-get="/projects" hx-target="main" hx-push-url="true">
-							Projects Overview
-						</temporary-list-item>
-						<temporary-list-item interactive border type="button" href="/projects/musicgpt" hx-get="/projects/musicgpt" hx-target="main" hx-push-url="true">
-							MusicGPT
-						</temporary-list-item>
-						<temporary-list-item interactive border type="button" href="/projects/gox-framework" hx-get="/projects/gox-framework" hx-target="main" hx-push-url="true">
-							GoX
-						</temporary-list-item>
-						<t-dropdown>
-							<t-dropdown-title border hide-event slot="title">
-								<div slot="headline">CAAS</div>
-								<md-icon slot="active">arrow_drop_up</md-icon>
-								<md-icon slot="inactive">arrow_drop_down</md-icon>
-							</t-dropdown-title>
-							<t-dropdown-list slot="content">
-								<t-dropdown-list-item interactive border type="text" href="/projects/caas" hx-get="/projects/caas" hx-target="main" hx-push-url="true">
-									Overview
-								</t-dropdown-list-item>
-								<t-dropdown-list-item interactive border type="text" href="/projects/caas/segmentation" hx-get="/projects/caas/segmentation" hx-target="main" hx-push-url="true">
-									Segmentation
-								</t-dropdown-list-item>
-								<t-dropdown-list-item interactive border type="text" href="/projects/caas/cluster" hx-get="/projects/caas/cluster" hx-target="main" hx-push-url="true">
-									Cluster
-								</t-dropdown-list-item>
-								<t-dropdown-list-item interactive border type="text" href="/projects/caas/processor" hx-get="/projects/caas/processor" hx-target="main" hx-push-url="true">
-									Processor
-								</t-dropdown-list-item>
-							</t-dropdown-list>
-						</t-dropdown>
-						<temporary-list-item interactive border type="button" href="/projects/tweetailyze" hx-get="/projects/tweetailyze" hx-target="main" hx-push-url="true">
-							TweetAIlyze
-						</temporary-list-item>
-						<temporary-list-item interactive border type="button" href="/projects/peoplepedia" hx-get="/projects/peoplepedia" hx-target="main" hx-push-url="true">
-							PeoplePedia
-						</temporary-list-item>
-					</t-mobile-navigation-drawer>
-				</t-mobile-navigation>
-				<t-navigation>
-					<div slot="footer">
-						<temporary-list-item interactive type="link" href="https://github.com/caleb-sideras/">
-							github
-							<md-icon slot="end" class="material-symbols-filled-light">north_east</md-icon>
-						</temporary-list-item>
-						<temporary-list-item interactive type="link" href="https://www.linkedin.com/in/caleb-james-sideras-9555b0196/">
-							linkedin
-							<md-icon slot="end" class="material-symbols-filled-light">north_east</md-icon>
-						</temporary-list-item>
-					</div>
-					<t-navigation-rail slot="rail">
-						<temporary-list-item interactive type="button" href="/" regex="^/?$" hx-get="/" hx-target="main" hx-push-url="true">
-							Home
-							<md-icon slot="start" class="material-symbols-filled">crop_square</md-icon>
-						</temporary-list-item>
-						<temporary-list-item interactive type="button" href="/projects" regex={`^/?\/projects(\/?|\/.*)?$`} hx-get="/projects" hx-target="main" hx-push-url="true">
-							Projects
-							<md-icon slot="start" class="material-symbols-filled">code_blocks</md-icon>
-						</temporary-list-item>
-						<temporary-list-item interactive type="button" href="/experience" regex={`^/?\/experience(\/?|\/.*)?$`} hx-get="/experience" hx-target="main" hx-push-url="true">
-							Experience
-							<md-icon slot="start" class="material-symbols-filled">developer_guide</md-icon>
-						</temporary-list-item>
-						<temporary-list-item interactive type="button" href="/blog" regex={`^/?\/blog(\/?|\/.*)?$`} hx-get="/blog" hx-target="main" hx-push-url="true">
-							Blog
-							<md-icon slot="start" class="material-symbols-filled">article</md-icon>
-						</temporary-list-item>
-					</t-navigation-rail>
-					<t-navigation-drawer slot="drawer">
-						<temporary-list-item interactive border type="button" href="/projects" hx-get="/projects" hx-target="main" hx-push-url="true">
-							Projects Overview
-						</temporary-list-item>
-						<temporary-list-item interactive border type="button" href="/projects/musicgpt" hx-get="/projects/musicgpt" hx-target="main" hx-push-url="true">
-							MusicGPT
-						</temporary-list-item>
-						<temporary-list-item interactive border type="button" href="/projects/gox-framework" hx-get="/projects/gox-framework" hx-target="main" hx-push-url="true">
-							GoX
-						</temporary-list-item>
-						<t-dropdown>
-							<t-dropdown-title border hide-event slot="title">
-								<div slot="headline">CAAS</div>
-								<md-icon slot="active">arrow_drop_up</md-icon>
-								<md-icon slot="inactive">arrow_drop_down</md-icon>
-							</t-dropdown-title>
-							<t-dropdown-list slot="content">
-								<t-dropdown-list-item interactive border type="text" href="/projects/caas" hx-get="/projects/caas" hx-target="main" hx-push-url="true">
-									Overview
-								</t-dropdown-list-item>
-								<t-dropdown-list-item interactive border type="text" href="/projects/caas/segmentation" hx-get="/projects/caas/segmentation" hx-target="main" hx-push-url="true">
-									Segmentation
-								</t-dropdown-list-item>
-								<t-dropdown-list-item interactive border type="text" href="/projects/caas/cluster" hx-get="/projects/caas/cluster" hx-target="main" hx-push-url="true">
-									Cluster
-								</t-dropdown-list-item>
-								<t-dropdown-list-item interactive border type="text" href="/projects/caas/processor" hx-get="/projects/caas/processor" hx-target="main" hx-push-url="true">
-									Processor
-								</t-dropdown-list-item>
-							</t-dropdown-list>
-						</t-dropdown>
-						<temporary-list-item interactive border type="button" href="/projects/tweetailyze" hx-get="/projects/tweetailyze" hx-target="main" hx-push-url="true">
-							TweetAIlyze
-						</temporary-list-item>
-						<temporary-list-item interactive border type="button" href="/projects/peoplepedia" hx-get="/projects/peoplepedia" hx-target="main" hx-push-url="true">
-							PeoplePedia
-						</temporary-list-item>
-					</t-navigation-drawer>
-				</t-navigation>
+				@Navigation()
+				@MobileNavigation()
 			</header>
 			<div class="main_container">
 				<main>
@@ -168,4 +29,152 @@ templ IndexTempl() {
 			</div>
 		</body>
 	</html>
+}
+
+templ Navigation() {
+	<t-navigation>
+		<t-navigation-rail slot="rail">
+			<temporary-list-item interactive type="link" href="/" regex="^/?$" hx-boost="true">
+				Home
+				<md-icon slot="start" class="material-symbols-filled">crop_square</md-icon>
+			</temporary-list-item>
+			<temporary-list-item interactive type="link" href="/projects" regex={ `^/?\/projects(\/?|\/.*)?$` } hx-boost="true">
+				Projects
+				<md-icon slot="start" class="material-symbols-filled">code_blocks</md-icon>
+			</temporary-list-item>
+			<temporary-list-item interactive type="link" href="/experience" regex={ `^/?\/experience(\/?|\/.*)?$` } hx-boost="true">
+				Experience
+				<md-icon slot="start" class="material-symbols-filled">developer_guide</md-icon>
+			</temporary-list-item>
+			<temporary-list-item interactive type="link" href="/blog" regex={ `^/?\/blog(\/?|\/.*)?$` } hx-boost="true">
+				Blog
+				<md-icon slot="start" class="material-symbols-filled">article</md-icon>
+			</temporary-list-item>
+		</t-navigation-rail>
+		<t-navigation-drawer slot="drawer">
+			<temporary-list-item interactive border type="link" href="/projects" hx-boost="true">
+				Projects Overview
+			</temporary-list-item>
+			<temporary-list-item interactive border type="linke" href="/projects/musicgpt" hx-boost="true">
+				MusicGPT
+			</temporary-list-item>
+			<temporary-list-item interactive border type="link" href="/projects/gox-framework" hx-boost="true">
+				GoX
+			</temporary-list-item>
+			<t-dropdown>
+				<t-dropdown-title border hide-event slot="title">
+					<div slot="headline">CAAS</div>
+					<md-icon slot="active">arrow_drop_up</md-icon>
+					<md-icon slot="inactive">arrow_drop_down</md-icon>
+				</t-dropdown-title>
+				<t-dropdown-list slot="content">
+					<t-dropdown-list-item interactive border type="link" href="/projects/caas" hx-boost="true">
+						Overview
+					</t-dropdown-list-item>
+					<t-dropdown-list-item interactive border type="link" href="/projects/caas/segmentation" hx-boost="true">
+						Segmentation
+					</t-dropdown-list-item>
+					<t-dropdown-list-item interactive border type="link" href="/projects/caas/cluster" hx-boost="true">
+						Cluster
+					</t-dropdown-list-item>
+					<t-dropdown-list-item interactive border type="link" href="/projects/caas/processor" hx-boost="true">
+						Processor
+					</t-dropdown-list-item>
+				</t-dropdown-list>
+			</t-dropdown>
+			<temporary-list-item interactive border type="link" href="/projects/tweetailyze" hx-boost="true">
+				TweetAIlyze
+			</temporary-list-item>
+			<temporary-list-item interactive border type="link" href="/projects/peoplepedia" hx-boost="true">
+				PeoplePedia
+			</temporary-list-item>
+		</t-navigation-drawer>
+		<div slot="footer">
+			@NavFooter()
+		</div>
+	</t-navigation>
+}
+
+templ MobileNavigation() {
+	@MobileAppBar()
+	<t-mobile-navigation>
+		<t-mobile-navigation-rail slot="rail">
+			<temporary-list-item interactive type="link" href="/" regex="^/?$" hx-boost="true">
+				Home
+				<md-icon slot="start" class="material-symbols-filled">crop_square</md-icon>
+			</temporary-list-item>
+			<temporary-list-item interactive type="button" href="/projects" regex={ `^/?\/projects(\/?|\/.*)?$` }>
+				Projects
+				<md-icon slot="start" class="material-symbols-filled">code_blocks</md-icon>
+				<md-icon slot="end" class="material-symbols-filled">arrow_forward</md-icon>
+			</temporary-list-item>
+			<temporary-list-item interactive type="link" href="/experience" regex={ `^/?\/experience(\/?|\/.*)?$` } hx-boost="true">
+				Experience
+				<md-icon slot="start" class="material-symbols-filled">developer_guide</md-icon>
+			</temporary-list-item>
+			<temporary-list-item interactive type="link" href="/blog" regex={ `^/?\/blog(\/?|\/.*)?$` } hx-boost="true">
+				Blog
+				<md-icon slot="start" class="material-symbols-filled">article</md-icon>
+			</temporary-list-item>
+		</t-mobile-navigation-rail>
+		<t-mobile-navigation-drawer slot="drawer">
+			<temporary-list-item interactive border type="link" href="/projects" hx-boost="true">
+				Projects Overview
+			</temporary-list-item>
+			<temporary-list-item interactive border type="link" href="/projects/musicgpt" hx-boost="true">
+				MusicGPT
+			</temporary-list-item>
+			<temporary-list-item interactive border type="link" href="/projects/gox-framework" hx-boost="true">
+				GoX
+			</temporary-list-item>
+			<t-dropdown>
+				<t-dropdown-title border hide-event slot="title">
+					<div slot="headline">CAAS</div>
+					<md-icon slot="active">arrow_drop_up</md-icon>
+					<md-icon slot="inactive">arrow_drop_down</md-icon>
+				</t-dropdown-title>
+				<t-dropdown-list slot="content">
+					<t-dropdown-list-item interactive border type="link" href="/projects/caas" hx-boost="true">
+						Overview
+					</t-dropdown-list-item>
+					<t-dropdown-list-item interactive border type="link" href="/projects/caas/segmentation" hx-boost="true">
+						Segmentation
+					</t-dropdown-list-item>
+					<t-dropdown-list-item interactive border type="link" href="/projects/caas/cluster" hx-boost="true">
+						Cluster
+					</t-dropdown-list-item>
+					<t-dropdown-list-item interactive border type="link" href="/projects/caas/processor" hx-boost="true">
+						Processor
+					</t-dropdown-list-item>
+				</t-dropdown-list>
+			</t-dropdown>
+			<temporary-list-item interactive border type="link" href="/projects/tweetailyze" hx-boost="true">
+				TweetAIlyze
+			</temporary-list-item>
+			<temporary-list-item interactive border type="link" href="/projects/peoplepedia" hx-boost="true">
+				PeoplePedia
+			</temporary-list-item>
+		</t-mobile-navigation-drawer>
+		<div slot="footer">
+			@NavFooter()
+		</div>
+	</t-mobile-navigation>
+}
+
+templ MobileAppBar() {
+	<t-mobile-top-app-bar>
+		<md-icon slot="navigationIcon" class="material-symbols-filled">menu</md-icon>
+	</t-mobile-top-app-bar>
+}
+
+templ NavFooter() {
+	<t-mode-toggle></t-mode-toggle>
+	<temporary-list-item interactive type="link" href="https://github.com/caleb-sideras/">
+		github
+		<md-icon slot="end" class="material-symbols-filled-light">north_east</md-icon>
+	</temporary-list-item>
+	<temporary-list-item interactive type="link" href="https://www.linkedin.com/in/caleb-james-sideras-9555b0196/">
+		linkedin
+		<md-icon slot="end" class="material-symbols-filled-light">north_east</md-icon>
+	</temporary-list-item>
 }

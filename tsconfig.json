@@ -18,7 +18,7 @@
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
         "types": [
-      "bun-types" // add Bun global
+      "bun-types"
     ]
   }
 }

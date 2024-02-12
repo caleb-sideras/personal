@@ -32,7 +32,7 @@ func Experience(experience []JobExperience) templ.Component {
 		}
 		ctx = templ.ClearChildren(ctx)
 		for _, e := range experience {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"experience_container\"><t-experience position=\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<t-experience position=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -67,7 +67,7 @@ func Experience(experience []JobExperience) templ.Component {
 					return templ_7745c5c3_Err
 				}
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</ul></t-experience><p>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</ul><div slot=\"description\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -76,7 +76,7 @@ func Experience(experience []JobExperience) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></t-experience>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

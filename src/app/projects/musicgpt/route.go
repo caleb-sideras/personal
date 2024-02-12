@@ -1,9 +1,9 @@
 package musicgpt
 
 import (
+	"calebsideras.com/temporary/src/components/server"
+	"calebsideras.com/temporary/src/utils"
 	"github.com/a-h/templ"
-	"github.com/caleb-sideras/gox2/src/components/server"
-	"github.com/caleb-sideras/gox2/src/utils"
 )
 
 func Readme() templ.Component {
@@ -24,6 +24,7 @@ func Videos() templ.Component {
 			Src:         "https://img.youtube.com/vi/h95Pd2rcXvA/hqdefault.jpg",
 			Alt:         "MusicGPT Image",
 			Href:        "https://www.youtube.com/watch?v=h95Pd2rcXvA",
+			Boost:       "false",
 		},
 		{
 			Title:       "MusicGPT Devlog - App Router, ai/react etc",
@@ -31,6 +32,7 @@ func Videos() templ.Component {
 			Src:         "https://img.youtube.com/vi/52ZnigZ_G4g/hqdefault.jpg",
 			Alt:         "MusicGPT Image",
 			Href:        "https://www.youtube.com/watch?v=52ZnigZ_G4g",
+			Boost:       "false",
 		},
 		{
 			Title:       "How I made MusicGPT (rant)",
@@ -38,7 +40,8 @@ func Videos() templ.Component {
 			Src:         "https://img.youtube.com/vi/kVaLo40P9Xc/hqdefault.jpg",
 			Alt:         "MusicGPT Image",
 			Href:        "https://www.youtube.com/watch?v=kVaLo40P9Xc",
+			Boost:       "false",
 		},
 	}
-	return server.GridVideos(tLinkList)
+	return server.Grid(tLinkList)
 }

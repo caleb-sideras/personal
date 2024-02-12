@@ -10,17 +10,15 @@ type JobExperience struct {
 
 templ Experience(experience []JobExperience) {
 	for _, e:= range experience {
-		<div class="experience_container">
-			<t-experience position={ e.Position } company={ e.Company }>
-				<ul slot="list">
-					for _, l := range e.List {
-						<li>{ l }</li>
-					}
-				</ul>
-			</t-experience>
-			<p>
+		<t-experience position={ e.Position } company={ e.Company }>
+			<ul slot="list">
+				for _, l := range e.List {
+					<li>{ l }</li>
+				}
+			</ul>
+			<div slot="description">
 				{ e.Description  }
-			</p>
-		</div>
+			</div>
+		</t-experience>
 	}
 }

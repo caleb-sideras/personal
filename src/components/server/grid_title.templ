@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/caleb-sideras/gox2/src/utils"
+	"calebsideras.com/temporary/src/utils"
 )
 
 templ GridTitle(title string, videos []utils.TLinkContent) {
@@ -9,6 +9,6 @@ templ GridTitle(title string, videos []utils.TLinkContent) {
 		<h1>
 			{ title }
 		</h1>
-		@GridVideos(videos)
+		@Grid(videos)
 	</div>
 }

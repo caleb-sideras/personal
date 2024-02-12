@@ -22,57 +22,26 @@ import '@material/web/tabs/primary-tab.js';
 import '@material/web/tabs/tabs.js';
 import 'lit'
 
-import './src/components/client/t-link'
-import './src/components/client/t-header'
-import './src/components/client/experience'
+import './src/components/client/t-experience'
 
-import './src/components/client/temporary/t-dropdown'
-import './src/components/client/temporary/t-dropdown-list'
-import './src/components/client/temporary/t-dropdown-list-item'
-import './src/components/client/temporary/t-dropdown-title'
+import './src/components/temporary-components/htmx/t-htmx'
+import './src/components/temporary-components/msc/t-link'
+import './src/components/temporary-components/msc/t-link-2'
+import './src/components/temporary-components/msc/t-header'
+import './src/components/temporary-components/msc/t-mode-toggle'
 
-import './src/components/client/temporary/t-list-item'
-import './src/components/client/temporary/t-mobile-top-app-bar'
-import './src/components/client/temporary/t-mobile-navigation-drawer'
-import './src/components/client/temporary/t-mobile-navigation-rail'
-import './src/components/client/temporary/t-mobile-navigation'
+import './src/components/temporary-components/dropdown/t-dropdown'
+import './src/components/temporary-components/dropdown/t-dropdown-list'
+import './src/components/temporary-components/dropdown/t-dropdown-list-item'
+import './src/components/temporary-components/dropdown/t-dropdown-title'
 
-import './src/components/client/temporary/t-navigation'
-import './src/components/client/temporary/t-navigation-rail'
-import './src/components/client/temporary/t-navigation-drawer'
+import './src/components/temporary-components/list/list_item/t-list-item'
 
-import './src/components/client/internal/t-list-item'
-import './src/components/client/internal/t-list-item-2'
+import './src/components/temporary-components/navigation/mobile/t-mobile-top-app-bar'
+import './src/components/temporary-components/navigation/mobile/t-mobile-navigation-drawer'
+import './src/components/temporary-components/navigation/mobile/t-mobile-navigation-rail'
+import './src/components/temporary-components/navigation/mobile/t-mobile-navigation'
 
-// import './src/components/client/internal/t-navigation'
-// import './src/components/client/internal/t-navigation-rail'
-// import './src/components/client/internal/t-navigation-drawer-list'
-// import './src/components/client/internal/t-navigation-drawer'
-
-// import './src/components/client/internal/t-mobile-navigation'
-// import './src/components/client/internal/t-mobile-navigation-rail'
-// import './src/components/client/internal/t-mobile-navigation-drawer'
-
-// import './src/components/client/internal/t-dropdown'
-// import './src/components/client/internal/t-dropdown-list'
-// import './src/components/client/internal/t-dropdown-list-item'
-// import './src/components/client/internal/t-dropdown-title'
-
-// import './src/components/client/t-list'
-// import './src/components/client/t-list-item'
-
-// import './src/components/client/t-navigation'
-// import './src/components/client/internal/t-navigation'
-
-// import './src/components/client/t-navigation-rail'
-// import './src/components/client/t-navigation-rail-item'
-
-// import './src/components/client/t-navigation-drawer'
-// import './src/components/client/t-navigation-drawer-list'
-// import './src/components/client/t-navigation-drawer-list-item'
-
-// import './src/components/client/t-dropdown'
-// import './src/components/client/t-dropdown-title'
-// import './src/components/client/t-dropdown-list'
-// import './src/components/client/t-dropdown-list-item'
-
+import './src/components/temporary-components/navigation/t-navigation'
+import './src/components/temporary-components/navigation/t-navigation-rail'
+import './src/components/temporary-components/navigation/t-navigation-drawer'
