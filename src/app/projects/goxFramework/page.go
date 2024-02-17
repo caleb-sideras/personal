@@ -12,8 +12,8 @@ func Page(w http.ResponseWriter, r *http.Request) templ.Component {
 	return server.ProjectTab(server.ProjectTabType{
 		Title:       "GoX Framework",
 		ProjectURL:  "https://goxFramework.org",
-		ReadMeURL:   "/projects/goxFramework/readme",
-		VideoURL:    "/projects/goxFramework/videos",
+		ReadMeURL:   "/projects/gox-framework/readme",
+		VideoURL:    "/projects/gox-framework/videos",
 		InitialBody: Readme(),
 	})
 }

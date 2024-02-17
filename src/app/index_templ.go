@@ -190,7 +190,7 @@ func Navigation() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</temporary-list-item> <temporary-list-item interactive border type=\"linke\" href=\"/projects/musicgpt\" hx-boost=\"true\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</temporary-list-item> <temporary-list-item interactive border type=\"link\" href=\"/projects/musicgpt\" hx-boost=\"true\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
