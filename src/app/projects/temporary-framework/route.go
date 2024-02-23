@@ -6,7 +6,7 @@ import (
 	"github.com/a-h/templ"
 )
 
-func Readme() templ.Component {
+func Readme_() templ.Component {
 
 	newTempl, err := utils.MdFileToTempl("src/app/projects/_markdown/temporary_framework.md")
 	if err != nil {
@@ -16,7 +16,7 @@ func Readme() templ.Component {
 	return newTempl
 }
 
-func Videos() templ.Component {
+func Videos_() templ.Component {
 	tLinkList := []utils.TLinkContent{
 		{
 			Title:       "Temporary Framework Deep Dive",

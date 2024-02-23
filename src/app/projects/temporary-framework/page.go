@@ -12,6 +12,6 @@ func Page_() templ.Component {
 		ProjectURL:  "http://temporary-framework.org/",
 		ReadMeURL:   "/projects/temporary-framework/readme",
 		VideoURL:    "/projects/temporary-framework/videos",
-		InitialBody: Readme(),
+		InitialBody: Readme_(),
 	})
 }

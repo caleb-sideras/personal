@@ -1,14 +1,12 @@
 package tweetailyze
 
 import (
-	"net/http"
-
 	"calebsideras.com/temporary/src/components/server"
 	"calebsideras.com/temporary/src/utils"
 	"github.com/a-h/templ"
 )
 
-func Page(w http.ResponseWriter, r *http.Request) templ.Component {
+func Page_() templ.Component {
 
 	newTempl, err := utils.MdFileToTempl("src/app/projects/_markdown/tweetailyze.md")
 
