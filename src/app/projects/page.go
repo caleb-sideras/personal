@@ -12,6 +12,14 @@ func Page(w http.ResponseWriter, r *http.Request) templ.Component {
 
 	tLinkList := []utils.TLinkContent{
 		{
+			Title:       "Temporary Framework",
+			Description: "The HTMX and Templ Framework you are looking for.",
+			Src:         "https://temporary-framework.org/static/assets/temporary.png",
+			Alt:         "Temporary Image",
+			Href:        "/projects/temporary-framework",
+			Boost:       "true",
+		},
+		{
 			Title:       "MusicGPT",
 			Description: "Multimodal AI that generates custom visualizations and facilitates natural language dialogue about technical aspects of a song - spanning from its musical structure to its production features.",
 			Src:         "https://music-gpt.xyz/musicgpt.png",
@@ -50,13 +58,6 @@ func Page(w http.ResponseWriter, r *http.Request) templ.Component {
 			Href:        "/projects/tweetailyze",
 			Alt:         "Tweetailyze Github",
 			Boost:       "true",
-		},
-		{
-			Title:       "Temporary Framework",
-			Description: "A framework designed to enforce my temporary web standard. Utilizes HTMX, Go & Templ.",
-			Src:         "/static/assets/coming_soon.jpg",
-			Alt:         "Coming Soon",
-			Disabled:    true,
 		},
 		{
 			Title:       "Temporary UI",
